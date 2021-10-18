@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Cassannet';
+    src: url('Cassannet-Bold.woff2') format('woff2'),
+        url('Cassannet-Bold.woff') format('woff'),
+        url('Cassannet-Bold.ttf') format('truetype'),
+        url('Cassannet-Bold.svg#Cassannet-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+

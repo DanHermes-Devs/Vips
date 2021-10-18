@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Museo 900';
+    src: url('../fonts/Museo900-Regular.eot');
+    src:url('../fonts/Museo900-Regular.woff2') format('woff2'),
+        url('../fonts/Museo900-Regular.woff') format('woff'),
+        url('../fonts/Museo900-Regular.ttf') format('truetype'),
+        url('../fonts/Museo900-Regular.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+	font-display: fallback; /* Define how the browser behaves during download */
+}
+@font-face {
+    font-family: 'Museo 700';
+    src: url('../fonts/Museo-700.woff2') format('woff2'),
+        url('../fonts/Museo-700.woff') format('woff'),
+        url('../fonts/Museo-700.ttf') format('truetype'),
+        url('../fonts/Museo-700.svg#Museo-700') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo 500';
+    src: url('../fonts/Museo-500.woff2') format('woff2'),
+        url('../fonts/Museo-500.woff') format('woff'),
+        url('../fonts/Museo-500.ttf') format('truetype'),
+        url('../fonts/Museo-500.svg#Museo-500') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo 300';
+    src: url('../fonts/Museo300-Regular.woff2') format('woff2'),
+        url('../fonts/Museo300-Regular.woff') format('woff'),
+        url('../fonts/Museo900-Regular.ttf') format('truetype'),
+        url('../fonts/Museo300-Regular.svg#Museo-300') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.museo900{
+	font-family: 'Museo 900', sans-serif;
+}
+.museo700{
+	font-family: 'Museo 700', sans-serif;
+}
+.museo500{
+	font-family: 'Museo 500', sans-serif;
+}
+.museo300{
+	font-family: 'Museo 300', sans-serif;
+}

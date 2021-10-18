@@ -1,0 +1,185 @@
+/* --- Wrapper --- */
+
+body {
+    overflow-x: hidden;
+}
+
+.bg {
+    background: url("../img/bg-vales.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.pattern {
+    position: absolute;
+    opacity: 0.5;
+}
+
+.left {
+    left: 0;
+    top: 5%;
+    transform: rotate(180deg);
+}
+
+.right {
+    right: 0;
+    bottom: 15%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* --- Hero text --- */
+
+.container .title {
+    padding-top: 40px;
+    font-family: 'Museo 700';
+    color: #FFD600;
+    font-size: 3.75em;
+    line-height: 55px;
+}
+
+/* --- Descuento --- */
+
+.container .desc-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    /* width: 80vw; */
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.desc-wrapper .subtitle {
+    font-family: 'Museo 900';
+    color: #ffffff;
+    font-size: 6em;
+}
+
+.desc-wrapper .diez {
+    font-family: 'Museo 900';
+    font-size: 12em;
+    color: #FFD600;
+    text-align: left;
+    padding: 0 25px;
+}
+
+.desc-wrapper .porcentaje {
+    font-family: 'Museo 900';
+    font-size: 5em;
+    text-align: left;
+    line-height: 55px;
+}
+
+.desc-wrapper .porcentaje .mas {
+    color: #ffffff;
+}
+
+.desc-wrapper .porcentaje .signo {
+    color: #FFD600;
+}
+
+.container .logos {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .logos img {
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+.container .legales {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .legales .btn-busca {
+    width: fit-content;
+    margin: 15px auto;
+    padding: 15px 30px;
+    background-color: #F5A623;
+    border-radius: 50px;
+    font-family: 'Museo 500';
+    color: #FFF;
+    text-decoration: none;
+}
+
+.container .legales .tyc {
+    /* margin-bottom: 30px; */
+    font-family: 'Museo 500';
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+/* --- --- MEDIA QUERIES --- ---  */
+
+@media screen and (max-width: 800px) {
+
+    .pattern {
+        width: 120px;
+    }
+
+    .container .title {
+        font-size: 3em;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .desc-wrapper .subtitle {
+        font-size: 4em;
+    }
+
+    .desc-wrapper .diez {
+        font-size: 10em;
+    }
+
+    .desc-wrapper .porcentaje {
+        font-size: 4em;
+    }
+    
+}
+
+@media screen and (max-width: 425px) {
+
+    .container .title {
+        font-size: 2.5em;
+    }
+
+    .container .desc-wrapper {
+        flex-flow: column;
+    }
+
+    .desc-wrapper .diez::after {
+        content: '%';
+        font-size: 0.8em;
+    }
+
+    .desc-wrapper .porcentaje .signo{
+        display: none;
+    }
+
+    .desc-wrapper .subtitle {
+        font-size: 3em;
+    }
+
+    .desc-wrapper .diez {
+        font-size: 9em;
+    }
+
+    .desc-wrapper .porcentaje {
+        font-size: 3em;
+    }
+}

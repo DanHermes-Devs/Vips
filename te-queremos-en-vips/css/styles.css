@@ -1,0 +1,169 @@
+body {
+    box-sizing: border-box;
+    background: url(../img/BG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: "promo slider"
+                         "terms slider";
+    column-gap: 50px;
+    align-content: center;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 90vh;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* --- promo --- */
+.promo {
+    grid-column-start: "promo";
+    grid-column-end: "promo";
+    width: 100%;
+    margin-top: 3vh;
+    text-align: center;
+
+}
+.promo .subtitle {
+    font-family: 'AmsiPro-Black';
+    font-size: 2.0em;
+    color: #52504A;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.promo .subtitle::before {
+    content: url('../img/divider.svg');
+    padding-right: 10px;
+    top: 5px;
+    position: relative;
+}
+
+.promo .subtitle::after {
+    content: url('../img/divider.svg');
+    padding-left: 10px;  
+    top: 5px;
+    position: relative;    
+}
+
+.promo .platillos {
+    font-family: 'AmsiPro-Black';
+    font-size: 1.5em;
+    color: #52504A;
+    text-transform: uppercase;
+}
+
+.promo .precio {
+    font-family: 'AmsiPro-Ultra';
+    font-size: 8em;
+    color: #E40021;
+}
+
+.promo .precio::before {
+    content: '$';
+    font-size: .5em;
+    color: #E40021;
+    position: relative;
+    bottom: 20px;
+    padding: 10px;
+}
+
+.promo .precio::after {
+    content: 'c/u';
+    font-size: .3em;
+    color: #E40021;
+    position: relative;
+    bottom: 30px;
+    padding: 10px;
+}
+
+/* --- slider --- */
+
+.slide-container {
+    grid-column: "slider";
+    grid-row: "slider";
+}
+
+.slick-slider {
+    width: 500px;
+    min-width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.slick-slider .slide {
+    width: 100%;
+}
+
+.slick-slider .slide img {  
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.slick-slider .platillo-nombre {
+    font-family: 'AmsiPro-Bold';
+    color: #E40021;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    margin-top: -40px;
+}
+
+/* --- busca tu vips --- */
+
+.buscador {
+    text-align: center;
+    grid-column-start: "terms";
+}
+
+.buscador a {
+    text-decoration: none;
+}
+
+.buscador .boton-vips {
+    font-family: 'AmsiPro-Bold';
+    font-size: 1.2em;
+    background: #ffa700;
+    display: inline-block;
+    color: #fff;
+    padding: 12px 25px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.buscador .terms {
+    font-family: 'AmsiPro-Bold';
+    display: block;
+    font-size: 0.8em;
+    color: #52504A;
+    margin: 20px;
+}
+
+.buscador .terms:hover {
+    color: #E40021;
+    text-decoration: underline;
+}
+
+@media screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+    .wrapper {
+        /* grid-template-columns: 1fr; */
+        grid-template-areas: "promo"
+                             "terms"
+                             "slider";
+    }
+}
+
+@media screen 
+and (min-width : 320px) 
+and (max-width : 768px) {
+    .wrapper {
+        /* grid-template-columns: 1fr; */
+        grid-template-areas: "promo"
+                             "terms"
+                             "slider";
+    }
+}

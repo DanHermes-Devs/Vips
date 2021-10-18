@@ -1,0 +1,546 @@
+body{
+	font-size: 16px;
+}
+/* FONTS */
+
+@font-face {
+    font-family: 'Museo 900';
+    src: url('fonts/museo/Museo900-Regular.eot');
+    src:url('fonts/museo/Museo900-Regular.woff2') format('woff2'),
+        url('fonts/museo/Museo900-Regular.woff') format('woff'),
+        url('fonts/museo/Museo900-Regular.ttf') format('truetype'),
+        url('fonts/museo/Museo900-Regular.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+	font-display: fallback; /* Define how the browser behaves during download */
+}
+@font-face {
+    font-family: 'Museo 700';
+    src: url('fonts/museo/Museo-700.woff2') format('woff2'),
+        url('fonts/museo/Museo-700.woff') format('woff'),
+        url('fonts/museo/Museo-700.ttf') format('truetype'),
+        url('fonts/museo/Museo-700.svg#Museo-700') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo 500';
+    src: url('fonts/museo/Museo-500.woff2') format('woff2'),
+        url('fonts/museo/Museo-500.woff') format('woff'),
+        url('fonts/museo/Museo-500.ttf') format('truetype'),
+        url('fonts/museo/Museo-500.svg#Museo-500') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('fonts/glyphicons/glyphicons-halflings-regular.eot');
+    src: url('fonts/glyphicons/glyphicons-halflings-regular.woff2') format('woff2'),
+        url('fonts/glyphicons/glyphicons-halflings-regular.woff') format('woff'),
+        url('fonts/glyphicons/glyphicons-halflings-regular.ttf') format('truetype'),
+        url('fonts/glyphicons/Museo-500.svg#Museo-500') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.museo900{
+	font-family: 'Museo 900';
+}
+.museo700{
+	font-family: 'Museo 700';
+}
+.museo500{
+	font-family: 'Museo 500';
+}
+
+/* FONT STYLING */
+.txt_uppercase
+{
+	text-transform: uppercase;
+}
+
+/* FONT COLORS */
+.fc_white{
+	color: #ffffff;
+}
+.fc_yellow{
+	color: #fad703;
+}
+.fc_red{
+	color: #e42330;
+}
+
+/* Background */
+.main_background {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../images/bg-login.jpg);
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-repeat: repeat;
+        background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+}
+
+/* TEXTS */
+.description_text{
+	font-family: 'Museo 500';
+	color: #602f0e;
+	font-size: .9rem;
+	line-height: 1.3rem;
+	padding: 0 .8rem;
+}
+
+/* HEADER */
+.logo{
+	width: 3.5rem;
+}
+
+a.menu_btn{
+	float: right;
+	margin-top:3px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+a.notificaciones_btn{
+	display: none;
+}
+
+a.ticket_btn{
+	display: none;
+}
+
+a.menu_btn_close{
+	float: right;
+	margin-top:5px;
+	margin-right: 0px;
+	cursor: pointer;
+	color: #ffffff;
+	width: 34px;
+}
+
+img.menu_ico{
+	width: 2rem;
+	
+}
+
+/* MAIN CONTENT */
+.logo_navidenos{
+	width: 6rem;
+	margin-bottom: 1rem;
+}
+.pavips{
+	width: 3rem;
+	margin-bottom: .5rem;
+}
+a.btn_login, a.btn_registro{
+	margin-bottom: .5rem;
+	width: 100%;
+	display: inline-block;
+}
+.btn_login img, .btn_registro img{
+	width: 70%;
+}
+
+/* USER INFO */
+p.user_name{
+	font-size: 2rem;
+	line-height: 2.1rem;
+}
+p.user_points{
+	font-size: 1.4rem;
+	line-height: 1.7rem;
+}
+
+
+/* MENÚ LATERAL */
+aside.menu_lateral{
+	width: 100%;
+	height:100%;
+	position: fixed;
+	background: rgb(204,32,47);
+	background: linear-gradient(0deg, rgba(204,32,47,0.7035189075630253) 0%, rgba(204,32,47,1) 100%);
+	z-index: 100;
+	transition: transform 0.5s ease-out;
+	transform: translateX(-101%);
+	overflow-y: scroll;
+}
+
+.menu_lateral_show{
+	transform: translateX(0) !important;
+}
+.menu_lateral_hide{
+	transform: translateX(-101%) !important;
+}
+
+aside.menu_lateral h1{
+	font-size: 1.6rem;
+	border-bottom: 1px solid #ffffff;
+	padding-bottom: .6rem;
+}
+
+.panel-heading {
+  padding: 0;
+	border:0;
+}
+.panel-title>a, .panel-title>a:active{
+	font-family: 'Museo 700';
+	display:block;
+	padding:15px 0;
+	color:#ffffff;
+	font-size:1.6rem;
+	text-transform:uppercase;
+	letter-spacing:1px;
+  	word-spacing:3px;
+	text-decoration:none;
+}
+h4.panel-title
+{
+	margin: 0;
+	padding: 0;
+}
+.panel-heading  a:before {
+   font-family: 'Glyphicons Halflings';
+   content: "\e114";
+   float: right;
+   transition: all 0.5s;
+   font-size: 1rem;
+   padding-top: .3rem;
+}
+.panel-heading.active a:before {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+} 
+.panel_border_bottom{
+	border-bottom: 1px solid #ffffff;
+}
+
+.slider {
+	width: 100%;
+	margin: 0 auto;
+}
+.slick-slide {
+	margin: 0px 8px;
+}
+.slick-slide img {
+	width: 100%;
+}
+.slick-prev:before,
+.slick-next:before {
+	color: black;
+}
+.slick-slide {
+	transition: all ease-in-out .3s;
+}
+
+.slick-active {
+	opacity: .5;
+}
+.slick-current {
+	opacity: 1;
+}
+
+
+ /* ASIDE TÉRMINOS Y CONDICIONES */
+.container_btn_tyc{
+	position: absolute;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	text-align: center;
+}
+.btn_tyc{
+	height:50px;
+    width:100px;
+    border-radius: 100px 100px 0 0;
+    background-color: #85c6ee;
+    cursor: pointer;
+}
+.btn_tyc p{
+	color: #0c5d7b;
+	text-transform: uppercase;
+	font-size: .6rem;
+	font-family: 'Museo 700';
+	padding-top:1rem;
+}
+
+
+
+aside.tyc_content{
+	width: 100%;
+	height:100%;
+	position: fixed;
+	background: url(../images/bg_tyc.jpg);
+	background-position: top center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	z-index: 100;
+	transition: transform 0.5s ease-out;
+	transform: translateY(101%);
+	
+}
+
+.tyc_show{
+	transform: translateY(0) !important;
+}
+.tyc_hide{
+	transform: translateY(101%) !important;
+}
+
+.container_btn_close_tyc{
+	position: absolute;
+	top: 0;
+	height: 50px;
+	width: 100%;
+	text-align: center;
+}
+.btn_close_tyc{
+	height:33px;
+    width:66px;
+    border-radius: 0 0 100px 100px;
+    background-color: #85c6ee;
+    cursor: pointer;
+}
+.btn_close_tyc p{
+	color: #0c5d7b;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	font-family: 'Museo 900';
+    padding-top: 0rem;
+}
+
+.tyc_title{
+	font-size: 1.4rem;
+}
+
+section.tyc_text{
+	background:  url(../images/bg_tyc.png);
+	background-position: bottom center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	
+	height: 60vh;
+	margin: 0 .8rem;
+	padding: 1rem .5rem 2rem .5rem;
+}
+
+section.tyc_text p{
+	font-size: 0.9rem;
+    line-height: 1.2rem;
+	color: #4d4d4d;
+	font-family: 'Museo 500';
+	text-align: justify;
+}
+
+.scroll_box{
+	width: 100%;
+	height: 98%;
+	margin: .3rem;
+	overflow-y: scroll;
+	padding: 1rem 1.3rem;
+}
+
+.custom_scrollbar::-webkit-scrollbar {
+    width: 3px;
+    background-color: #bcdbf3;
+} 
+.custom_scrollbar::-webkit-scrollbar-thumb {
+    background-color: #03455d;
+}
+.custom_scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #bcdbf3;
+}
+/*************** MEDIA QUERIES ***************/
+@media (min-width: 356px){
+	.logo_navidenos {
+    	width: 11rem;
+    }
+    .pavips {
+		width: 5rem;
+		margin-bottom: .7rem;
+	}
+	
+}
+@media (min-width: 410px){
+	.logo_navidenos {
+    	width: 13rem;
+    }
+    .pavips {
+		width: 8rem;
+		margin-bottom: .7rem;
+	}
+	
+}
+@media (min-height: 810px){
+	.logo_navidenos {
+    	width: 16rem;
+    }
+    .pavips {
+		width: 7rem;
+		margin-bottom: .7rem;
+	}
+	
+}
+@media (min-width: 767px) {
+	.logo {
+	    width: 7.5rem;
+	}
+	a.menu_btn{
+		margin-top: 1.7rem;
+	}
+	a.notificaciones_btn{
+	float: right;
+	display: inline-block;
+	margin-top:-3px;
+	margin-right: 24px;
+	cursor: pointer;
+	text-align: right;
+	}
+	a.notificaciones_btn img{
+		width: 80%;
+	}
+	a.ticket_btn{
+		float: right;
+		display: inline-block;
+		margin-top:-3px;
+		margin-right: 24px;
+		cursor: pointer;
+		text-align: right;
+		max-width: 180px;
+	}
+	a.ticket_btn img{
+		width: 100%;
+	}
+	a.menu_btn_close {
+    	margin-top: 28px;
+    }
+	.logo_navidenos {
+	    width: 22rem;
+	}
+	.description_text {
+	    font-size: 1.5rem;
+	    line-height: 1.8rem;
+	}
+	.pavips {
+	    width: 10.5rem;
+	}
+	.btn_login img, .btn_registro img {
+	    width: 100%;
+	}
+	
+	section.tyc_text{
+		padding: 0rem .5rem 4rem .5rem;
+	}
+	.scroll_box{
+		padding: 2rem 4.3rem;
+		margin: 2rem 0;
+	}
+	aside.menu_lateral{
+		width: 48%;
+		-ms-overflow-style: none;
+		overflow: hidden;
+	}
+	aside.menu_lateral::-webkit-scrollbar { 
+		width: 0 !important;
+		display: none;
+	}
+
+
+	
+}
+
+
+@media (min-width: 1023px){
+
+	aside.menu_lateral{
+		width: 30%;
+	}
+
+	a.menu_btn{
+		margin-top: 1.4rem;
+	}
+	.logo_navidenos {
+		width: 28rem;
+	}
+	.description_text {
+	    margin: 3rem 0;
+	}
+	.pavips {
+	    width: 15.5rem;
+	}
+	.btn_login img, .btn_registro img {
+	    width: 70%;
+	}
+	section.tyc_text{
+		padding: 0rem .5rem 7rem .5rem;
+	}
+	aside.menu_lateral h1, .panel-title>a, .panel-title>a:active {
+    	font-size: 1rem;
+    }
+
+		
+}
+
+@media (min-width: 1023px) and (min-height: 1366px) and (orientation:portrait){
+	.btn_login img, .btn_registro img {
+	    width: 100%;
+	}
+}
+
+
+@media (min-width: 1279px){
+
+	.logo {
+    	width: 5.5rem;
+	}
+	.logo_navidenos {
+		width: 11rem;
+	}
+	.description_text {
+		margin: 1rem auto;
+		font-size: 15px;
+		line-height: 1.6;
+		padding: 0;
+		max-width: 80%;
+	}
+	.pavips {
+		width: 8.5rem;
+		max-width: 140px;
+	}
+	.btn_login img, .btn_registro img {
+	    width: 50%;
+	}
+	.btn_login img{
+		float: right !important;
+	}
+	.btn_registro img {
+		float: left !important;
+	}
+		
+}
+
+
+@media (min-width: 1439px){
+
+	.logo {
+    	width: 5.5rem;
+	}
+	.logo_navidenos {
+		width: 20rem;
+		/*max-width: 250px;*/
+		margin-top: -5%;
+	}
+	#aside_tyc	.logo_navidenos {
+		margin-top: 0%;
+	}
+		
+}

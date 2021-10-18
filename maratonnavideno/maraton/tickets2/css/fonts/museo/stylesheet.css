@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Museo 700';
+    src: url('Museo-700.woff2') format('woff2'),
+        url('Museo-700.woff') format('woff'),
+        url('Museo-700.ttf') format('truetype'),
+        url('Museo-700.svg#Museo-700') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo 500';
+    src: url('Museo-500.woff2') format('woff2'),
+        url('Museo-500.woff') format('woff'),
+        url('Museo-500.ttf') format('truetype'),
+        url('Museo-500.svg#Museo-500') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+

@@ -1,0 +1,85 @@
+.input{
+  width: 80%;
+  height: 53px;
+  padding: 3%;
+  color: black;
+  font-size: 0.9em;
+  border:dashed;
+  border-color: #a9a6a1;
+  margin-left: 0;
+  float: left;
+}
+.browsser{
+  position: relative;
+  width: 10%;
+  padding: 0;
+  float: left;
+  margin-top: 0;
+  margin-left: 0;
+  height: 53px;
+  background: #DCDCDC;
+  color: white;
+  font-weight: bold;
+}
+.input::placeholder{
+  color: #4F4F4E;
+  margin-left: 3%;
+}
+input:focus{
+  outline: none;
+}
+.linea{
+ margin: 0;
+ padding: 0;
+ border-bottom: 1px  solid #a9a6a1;
+ padding-top: 0;
+}
+.frm-boton{
+ background: #F89E27;
+ color: white;
+ font-size: 0.9em;
+ border-color: #F89E27;
+ border: none;
+ width: 38%;
+ height:6%;
+ padding:2%;
+}
+hr{
+  margin: 1em 0;
+  width:90%;
+}
+.negrita{
+  font-weight: bold;
+}
+
+.input2{
+  width: 930px;
+  height: 100px;
+  padding: 4%;
+  color: black;
+  font-size: 40px;
+  border-color: rgba(255, 255, 255, 0.6);
+  padding-left: 19%;
+  float: left;
+  border:1px solid #DCDCDC;
+  box-shadow: 5px 5px 5px gray;
+}
+.browsser2{
+  position: absolute;
+  width: 20%;
+  padding: 4%;
+  float: left;
+  margin-top: 0;
+  margin-left: 0;
+  height: 100px;
+  color: black;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.6);
+  border:1px solid #DCDCDC;
+  border-right: none;
+}
+.input2::placeholder{
+  color: #4F4F4E;
+  margin-left: 3%;
+}

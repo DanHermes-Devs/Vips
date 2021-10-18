@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My store locator</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="/map/result-light.css">
+      <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700" rel="stylesheet">
+	
+	<style type="text/css">
+  *{font-family: 'Oswald', sans-serif;}
+    body {margin:0}
+	a{text-decoration:none;}
+
+#map {
+    width:70%; height:95%; 
+	max-height:95%;
+    position:absolute; float:left;
+	margin-top:-20px;
+  
+}
+.row{background-color: #fefbf7;
+  border-bottom: 0px solid #eadac1;
+  font: 100 16px/20px 'Oswald', sans-serif;
+  padding: 20px 20px 20px 40px;}
+
+#locations{  float: right;
+  overflow-y: auto;
+  height: 100%;
+  width: 30%;
+  right: 0px;
+  position: absolute;
+      margin-top: -20px;}
+
+.title {
+    color: #b92234;
+  cursor: default;
+  margin: 0px 0 4px 0;
+  
+  text-transform:uppercase;
+  text-align: left;
+    padding-left: 20px;
+  text-decoration:none;
+  cursor:pointer;
+  
+
+  font: 100 17px/23px 'Oswald', sans-serif;
+}
+
+.linktomap {
+    text-decoration: none;
+    font-weight: 100;
+    border-bottom: 1px solid #ddd;
+}
+#locations p{padding: 10px;}
+
+.button3:hover {
+   color: #d51c59;;
+}
+
+.button3:active {
+    vertical-align:-1px;
+}
+.mm-menu.mm-theme-black .mm-header {
+    border-color: rgba(0,0,0, 0.2);
+    background-color: #fff;
+    text-transform: uppercase;
+	color:#333;
+	    border: none;
+}
+
+
+    #locations p {
+        padding: 0px 5px 0px 20px;
+    margin: 0 0 5px 0;
+    font-weight: 100;
+    font-size: 80%;
+	line-height:1.6;
+}
+
+
+.textrest{
+	
+    width: 80%;
+    float: left;
+    font-size: 70%;
+    line-height: 1.2;
+
+}
+
+
+
+.mm-listview .mm-next.mm-fullsubopen + a, .mm-listview .mm-next.mm-fullsubopen + span {
+    padding-right: 50px;
+    margin-right: 0;
+        text-align: right;
+    padding-top: 0;
+    padding-bottom: 0px;
+    color: #b92234;
+    font-size: 80%;
+    font-weight: 100;
+    margin-top: -5px;
+}
+
+.taxonomy-term {
+    float: left;
+    display: inline-block;
+    width: 10.9%;
+    text-transform: uppercase;
+	color:#fff;
+	font-weight:300!important;
+	    cursor: pointer;
+}
+
+.taxonomy-tree {
+    height: 25px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+	margin-bottom:10px;
+}
+body {
+    background-color: transparent!important;
+   
+}
+.titlew {
+    border-bottom: 1px solid;
+    border-color: inherit;
+    text-align: center;
+    line-height: 20px;
+    height: 40px;
+    padding: 0 40px;
+  
+    color: rgba(0,0,0,.3);
+	    text-decoration: none;
+    font-weight: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+  </style>
+  
+  <style>
+.descstore{
+text-align:left;
+color:#333;
+text-transform:none;
+    padding-left: 20px;
+}
+.mm-listview>li>a, .mm-listview>li>span {
+    color: inherit;
+    display: block;
+    padding: 0 40px;
+    margin: 0;
+}
+.mm-panels>.mm-panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview {
+    margin-top: 0px!important;
+}
+.distance{
+    font-size: 10.5px!important;
+    color: #aaa!important;
+    float: right;
+    text-transform: none;
+}
+</style>
+	</head>
+	<body>
+	<script type="text/javascript" src="http://mmenu.frebsite.nl/js/jquery-1.8.3.min.js"></script>
+		<center><ul class="taxonomy-tree" id="nav">
+		
+		<li class="taxonomy-term estado" id="cdmx">CDMX</li>
+			<script>	
+				$(document).ready(function() {
+					$("#cdmx").click(function(){
+						$(".estado").removeClass("tselected");
+						$("#cdmx").addClass("tselected");
+					});
+
+				});
+			</script>
+			
+			<li class="taxonomy-term estado" id="edomex">Estado de México</li>
+			<script>	
+				$(document).ready(function() {
+					$("#edomex").click(function(){
+						$(".estado").removeClass("tselected");
+						$("#edomex").addClass("tselected");
+					});
+
+				});
+			</script>
+			
+			<li class="taxonomy-term estado" id="guanajuato">Guanajuato</li>
+			<script>	
+				$(document).ready(function() {
+					$("#guanajuato").click(function(){
+						$(".estado").removeClass("tselected");
+						$("#guanajuato").addClass("tselected");
+					});
+
+				});
+			</script>
+			
+			<li class="taxonomy-term estado" id="jalisco">Jalisco</li>
+			<script>	
+				$(document).ready(function() {
+					$("#jalisco").click(function(){
+						$(".estado").removeClass("tselected");
+						$("#jalisco").addClass("tselected");
+					});
+
+				});
+			</script>
+			
+			<li class="taxonomy-term estado" id="morelos">Morelos</li>
+			<script>	
+				$(document).ready(function() {
+					$("#morelos").click(function(){
+						$(".estado").removeClass("tselected");
+						$("#morelos").addClass("tselected");
+					});
+
+				});
+			</script>
+			
+			<li class="taxonomy-term estado" id="nuevoleon">Nuevo León</li>
+			<script>	
+				$(document).ready(function() {
+					$("#nuevoleon").click(function(){
+						$(".estado").removeClass("tselected");
+						$("#nuevoleon").addClass("tselected");
+					});
+
+				});
+			</script>
+			
+			<li class="taxonomy-term estado" id="puebla">Puebla</li>
+			<script>	
+				$(document).ready(function() {
+					$("#puebla").click(function(){
+						$(".estado").removeClass("tselected");
+						$("#puebla").addClass("tselected");
+					});
+
+				});
+			</script>
+			
+			<li class="taxonomy-term estado" id="queretaro">Querétaro</li>
+			<script>	
+				$(document).ready(function() {
+					$("#queretaro").click(function(){
+						$(".estado").removeClass("tselected");
+						$("#queretaro").addClass("tselected");
+					});
+
+				});
+			</script>
+			
+			<li class="taxonomy-term estado" id="yucatan">Yucatán</li>
+			<script>	
+				$(document).ready(function() {
+					$("#yucatan").click(function(){
+						$(".estado").removeClass("tselected");
+						$("#yucatan").addClass("tselected");
+					});
+
+				});
+			</script>
+			
+			</ul></center>
+
+		<div id="storeLocator" class="storeLocator">
+
+			<!--
+				This is the autocomplete address search field.
+				It must have the "input" class.
+			-->
+			<input type="text" class="input controls" placeholder="Ingresa una dirección, ciudad, C.P....">
+
+			<!--
+				This is the map div which will contain the map generated
+				by Google Maps. It must have the "map" class.
+			-->
+			<div id="map-canvas" class="map"></div>
+
+			<!--
+				This is the store list. It must contain the "data-list-stores"
+				attribute.
+			-->
+			
+			<div id="storeslist" class="storeslist" style=" height: 370px;background: #fff;   width: 29%;
+    float: left; max-height: 370px; overflow-y:hidden;">
+		
+			
+			<nav id="menu"  >
+
+			<ul id="stores"data-list-stores >
+
+				<!--
+					This element will be displayed while the stores are
+					loading. It must have the "loading" class.
+				-->
+				<p class="loading">Cargando...</p>
+
+				<!--
+					This element will be displayed if no store is found
+					at this place. It must have the "no-store" class.
+				-->
+				<p class="no-store" style="display: none">No se encontraron Restaurantes Cercanos</p>
+				<p class="no-store" style="display: none; font-size:70%">Intente otro término de búsqueda</p>
+				<a class="no-store" style="display: none" href="/stores">Recargar</a>
+
+				<!--
+					This element is actually the template which will be
+					cloned for each store to show. It is hidden (display: none)
+					and must have the "data-store-template" attribute.
+				-->
+				
+				
+				<!-- INICIA RESTAURANTE Masaryk-->
+				<li class="store" data-store-template  style="display: none">
+					<a class="linktomap" data-store-link-to-map>	
+					<span>
+				  <img src="/pfcms/img/ubicaciones/map-marker.png" width="40px" style="    margin-left: -25px;
+						width: 30px;
+						position: absolute;
+						left: 30px;
+						margin-top: 5px;">
+			<strong><span class="distance" data-store-attr="distance-miles"></span><h2 class="title"  data-store-attr='{"content":"name"}'></h2></strong>
+			
+				<p class="descstore" data-store-attr="addressresume"><br></p>
+				
+				
+				
+</span>
+	</a>				
+					<!-- INICIA DETALLES RESTAURANTE Masaryk-->
+					<ul id="stores2" >
+						<li class="detailsli">
+						
+							
+							<p data-store-attr="addressresume"></p>
+
+						 <center>
+						 <a target="_blank" href="#" data-store-attr='{"href":"url"}'>
+						 <img src="/pfcms/img/ubicaciones/waze.jpg" width="70px" style="margin:0 auto;" >
+						 <p class="pwaze">IR CON WAZE</p>
+						 </a>
+						 </center>
+							
+								
+						</li>
+
+						
+					</ul>
+					<!-- TERMINA DETALLES RESTAURANTE Masaryk-->
+				</li>
+			
+				<!-- TERMINA RESTAURANTE Masaryk-->
+			
+
+			</ul>
+			
+			</nav>
+			
+
+			<!--
+				This div defines what will be shown in the balloon window which will
+				appear when the user clicks on a store on the map. It works exactly as
+				the previous template div.
+			-->
+			<div style="display: none" data-store-infowindow-template>
+				<strong><span data-store-link-to-map data-store-attr="name"></span></strong><br>
+				<span data-store-attr="address"></span><br>
+				
+			</div>
+			
+			
+
+		</div>
+		
+		</div>
+		
+  <link type="text/css" rel="stylesheet" href="/map/inc/demoae52.css?v=5" />
+		<link type="text/css" rel="stylesheet" href="http://mmenu.frebsite.nl/mmenu/css/jquery.mmenu.all.css?v=5.6.x" />
+		<link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+		<style type="text/css">
+		
+			.Header,
+			.Prev,
+			.Next
+			{
+				display: none;
+			}
+
+			#menu
+			{
+				background: #fff;
+			}
+			#menu a{text-decoration:none;     font-weight: 100;}
+			h4
+			{
+				margin: 0 0 10px 0;
+			}
+			.thumb
+			{
+				display: block;
+				width: 30%;
+				margin: 0 2% 2% 0;
+				float: left;
+			}
+			.thumb img
+			{
+				float: left;
+				width: 100%;
+				height: auto;
+			}
+			.thumb-xs
+			{
+				vertical-align: middle;
+				display: inline-block;
+				margin: -5px 10px -5px 0;
+			}
+			.clear
+			{
+				clear: both;
+				display: block;
+				padding: 5px 0;
+				margin-bottom: 20px;
+			}
+			.large
+			{
+				width: 100%;
+				height: auto;
+			}
+			.mm-panel[id^="panel-"]:not(#panel-categories):not(#app)
+			{
+				padding-right: 0;
+			}
+			
+			.mm-menu.mm-theme-black .mm-header {
+    border-color: rgba(0,0,0, 0.2);
+    background-color: #fff;
+    /* color: #b92234!important; */
+}
+
+.mm-menu.mm-theme-black .mm-header > a {
+    color: #b92234;
+    font-weight: bolder;
+}
+
+.mm-menu > .mm-panel:before, .mm-menu > .mm-panel:after {
+    content: '';
+    display: block;
+    height: 0px;
+}
+.mm-menu.mm-hasheader .mm-panel, .mm-menu.mm-hasheader .mm-fixeddivider {
+    top: 60px;
+}
+
+.triangle {
+    position: absolute;
+    z-index: 99999;
+    top: 35%;
+    right: 30%;
+    opacity: .97;
+	width:3em;
+}
+
+.mm-menu.mm-theme-black .mm-listview > li:after {
+    border-bottom: .1px solid #b92234;
+    opacity: .15;
+    width: 100%;
+    margin-left: -20px;
+    margin-top: 20px;
+}
+
+.mm-listview .mm-next.mm-fullsubopen + a, .mm-listview .mm-next.mm-fullsubopen + span {
+    padding-right: 50px;
+    margin-right: 0;
+    padding-bottom: 5px;
+	margin-bottom: 8px;
+}
+
+.pwaze{
+	
+    padding: 0!important;
+    color: #111!important;
+    font-size: 73%!important;
+    margin-top: -8px!important;
+	
+}
+
+.mm-listview .mm-next {
+    background: rgba(3,2,1,0);
+    width: 30px;
+    padding: 0;
+    float: right;
+    position: absolute;
+    right: -13px;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.mm-listview .mm-next+a, .mm-listview .mm-next+span {
+    margin-right: 10px;
+
+}
+
+.tselected {
+    box-shadow: inset 0 2px 0 #f05451;
+	color:#B92234;
+	padding-top: 5px;
+}
+
+.mm-panel[id^="panel-"]:not(#panel-categories):not(#app) {
+    padding-right: 30px;
+}
+
+.mm-menu > .mm-panel {
+
+    padding-bottom: 35px!important;
+}
+
+
+
+/* styles for desktop */
+.tinynav { display: none }
+.mm-resultspanel li{
+	display:block!important;
+}
+
+.mm-title{ padding: 5px 0;}
+
+.detailsli{
+    padding: 25px!important;
+}
+
+/* styles for mobile */
+@media screen and (max-width: 800px) {
+	
+	#map {
+    width:100%; height:45%; 
+	max-height:95%;
+    position:absolute; float:left;
+	margin-top:-20px;
+  
+}
+
+
+#locations{  float: right;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  right: 0px;
+      position: absolute;
+    margin-top: 70%;
+    height: 350px;}
+    .tinynav { display: block }
+    #nav { display: none }
+	
+	#tinynav1 {
+    width: 100%;
+    padding: 2%;
+    margin: -5% 0 2% 0;
+    background: rgba(255, 255, 255, .3);
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#tinynav1 option {
+    color: #333;
+   ;
+}
+
+.restau{
+	
+float:left; width:100%;
+}
+
+.nopaddings{
+	    padding: 0!important;
+}
+
+.triangle {
+
+    display: none;
+}
+
+
+}
+
+		</style>
+		<style type="text/css">
+			#menu {
+				min-width: none;
+				max-width: none;
+				width: 100%;
+				height: 100%;
+				    position: relative;
+    z-index: 99999;
+			}
+		</style>
+
+	
+		<script type="text/javascript" src="http://mmenu.frebsite.nl/mmenu/js/jquery.mmenu.all.min.js?v=5.6.x"></script>
+		<script type="text/javascript">
+   jQuery(document).ready(function( $ ) {
+      $("#menu").mmenu({
+		  offCanvas: false,
+         "searchfield": {
+			 "add":false,
+			 
+            "resultsPanel": true,
+            "showTextItems": true,
+			"showSubPanels": true,
+			"placeholder": "Buscar...",
+			"noResults": "No hay resultados..."
+			
+         },
+
+		 "resultsPanel": {
+            "add": true,
+			"title": "Resultados de la búsqueda"
+           
+		
+			
+         },
+		 "navbar": {
+					"title": "RESTAURANTES CERCANOS"
+				},
+         "navbars": [
+            {
+               "position":[ "none"
+			   
+			   ],
+			   
+               
+            }
+         ]
+      }, {
+         "searchfield": {
+            "clear": true
+         }
+      });
+
+   });
+</script>
+	
+
+		
+
+		<!--
+			Remember that the plugins requires jQuery library, and the
+			Google Maps API.
+		-->
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://maps.google.com/maps/api/js?key=AIzaSyBYa35pTQPNWPkDW02YCpEjOYRcl63nDk4&amp;libraries=places"></script>
+
+		<!--
+			Include the jQuery plugin.
+		-->
+		<script src="jquery.allstorelctr.js"></script>
+ <script src="/pfcms/sites/all/themes/tccf/js/geolocation-marker.js"></script>
+		<script>
+
+			// When the document is fully loaded...
+			$(document).ready(function() {
+
+				// Here we say that we want to use the plugin
+				// on the "storeLocator" div. The storeLocator
+				// methods accepts as parameter the options that
+				// you want to pass to the plugin.
+			    $('#storeLocator').storeLocator({
+
+			    	// The fetchStoresFunction is a quite required
+			    	// option. It is a function which take three parameters:
+			    	// the latitude and the longitude of the address that
+			    	// the user wants to find the store nearby, and the
+			    	// function that will be called when the stores are fetched.
+			    	// See below for an example of such a function.
+			    	fetchStoresFunction: fetchStores,
+
+			    	// This options defines wether the user should be located
+			    	// to center the map on his position (it uses HTML5 API).
+			    	enableGeolocation: false,
+					
+					
+					
+
+
+			    });
+
+			});
+
+			// This example function simply makes an AJAX call to the stores.php
+			// script, which returns the stores in JSON format. The script takes
+			// two parameters: the latitude and the longitude. When the AJAX call
+			// is finished, we call the callback function. The stores will be passed
+			// as parameter to this function.
+			function fetchStores(lat, lng, callback) {
+			    $.get('allstores.php', { lat: lat, lng: lng }, 'json').success(callback);
+			}
+			
+			
+		</script>
+
+		
+	</body>
+</html>

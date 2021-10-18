@@ -1,0 +1,19 @@
+Options -Indexes
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php [N]
+RewriteRule ^platillo/([A-Za-z0-9-]+)/?$ platillo.php?url=$1 [L]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php [N]
+RewriteRule ^entrada/([A-Za-z0-9-]+)/?$ entrada.php?url=$1 [L]
+
+
+#remove php file extension
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]

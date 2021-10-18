@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Moreno';
+    src: url('Moreno-Bold.eot');
+    src: url('Moreno-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Moreno-Bold.woff2') format('woff2'),
+        url('Moreno-Bold.woff') format('woff'),
+        url('Moreno-Bold.ttf') format('truetype'),
+        url('Moreno-Bold.svg#Moreno-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+

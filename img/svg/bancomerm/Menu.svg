@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="26px" viewBox="0 0 39 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>MenuIcono</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HomeRegistrado-Copy-9" transform="translate(-100.000000, -650.000000)">
+            <g id="Group-3" transform="translate(0.000000, 639.000000)">
+                <g id="Navbar-Copy">
+                    <g id="MenuIcono" transform="translate(100.000000, 11.000000)">
+                        <path d="M34.3032,23.9476 L4.5312,23.9476 C2.9682,23.9476 1.6602,22.8336 1.3602,21.3586 L37.4742,21.3586 C37.1742,22.8336 35.8662,23.9476 34.3032,23.9476 M38.1862,20.0646 L0.6472,20.0646 C0.2902,20.0646 0.0002,20.3536 0.0002,20.7116 C0.0002,23.2086 2.0322,25.2416 4.5312,25.2416 L34.3032,25.2416 C36.8012,25.2416 38.8342,23.2086 38.8342,20.7116 C38.8342,20.3536 38.5442,20.0646 38.1862,20.0646" id="Fill-1" fill="#4A4A4A"></path>
+                        <path d="M3.8833,20.0643 C3.8833,11.4993 10.8523,4.5303 19.4173,4.5303 C27.9823,4.5303 34.9503,11.4993 34.9503,20.0643 L3.8833,20.0643 Z M19.4173,3.2363 C10.1383,3.2363 2.5893,10.7853 2.5893,20.0643 L2.5893,20.7113 C2.5893,21.0693 2.8793,21.3583 3.2363,21.3583 L35.5973,21.3583 C35.9553,21.3583 36.2443,21.0693 36.2443,20.7113 L36.2443,20.0643 C36.2453,10.7853 28.6963,3.2363 19.4173,3.2363 Z" id="Fill-4" fill="#4A4A4A"></path>
+                        <polygon id="Fill-10" fill="#FFFFFF" points="17.475 1.2939 21.358 1.2939 21.358 -0.0001 17.475 -0.0001"></polygon>
+                        <polygon id="Fill-12" fill="#4A4A4A" points="18.77 3.8829 20.064 3.8829 20.064 0.6469 18.77 0.6469"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

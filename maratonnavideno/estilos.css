@@ -1,0 +1,769 @@
+@font-face {
+    font-family: 'Museo 900';
+    src: url('/css/fonts/museo/Museo900-Regular.woff2') format('woff2'),
+        url('/css/fonts/museo/Museo900-Regular.woff') format('woff'),
+        url('/css/fonts/museo/Museo900-Regular.ttf') format('truetype'),
+        url('/css/fonts/museo/Museo900-Regular.svg#Museo-900') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo 700';
+src: url('/css/fonts/museo/Museo-700.woff2') format('woff2'),
+    url('/css/fonts/museo/Museo-700.woff') format('woff'),
+    url('/css/fonts/museo/Museo-700.ttf') format('truetype'),
+    url('/css/fonts/museo/Museo-700.svg#Museo-700') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo 500';
+src: url('/css/fonts/museo/Museo-500.woff2') format('woff2'),
+    url('/css/fonts/museo/Museo-500.woff') format('woff'),
+    url('/css/fonts/museo/Museo-500.ttf') format('truetype'),
+    url('/css/fonts/museo/Museo-500.svg#Museo-500') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "AmsiPro-Bold";
+    src: url("/css/fonts/amsi2/AmsiPro-Bold.otf") format("opentype");
+    src: url("/css/fonts/amsi2/AmsiPro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "AmsiPro-Black";
+    src: url("/css/fonts/amsi2/AmsiPro-Black.otf") format("opentype");
+    src: url("/css/fonts/amsi2/AmsiPro-Black.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "AmsiPro-Ultra";
+    src: url("/css/fonts/amsi2/AmsiPro-Ultra.otf") format("opentype");
+    src: url("/css/fonts/amsi2/AmsiPro-Ultra.ttf") format("truetype");
+}
+
+body {
+    background-color: #fff;
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+/* END HEADER */
+
+/* MAIN */
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: url('/img/2019/maraton/main-bg.jpg');
+    background-position-y: bottom;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.main .hero-txt {
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 2em;
+    padding-left: 10em;
+    justify-content: center;
+    line-height: 20px;
+}
+
+.main .hero-txt .logo {
+    margin-bottom: 40px;
+}
+
+.main .hero-txt .logo img {
+    max-width: 100%;
+}
+
+.main .hero-txt .subtitle {
+    font-family: 'Museo 500';
+    font-size: 1.1em;
+}
+
+.main .personajes {
+    padding-top: 3em;
+    text-align: center;
+    align-self: flex-end;
+    width: 60%;
+}
+
+.main .personajes img {
+    max-width: 100%;
+}
+
+.main .btn-wrapper {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .btn-wrapper a {
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.main .btn-wrapper a:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+.main .btn-wrapper img {
+    max-width: 100%;
+}
+
+/* END MAIN */
+
+/* BASES */
+
+.bases {
+    width: 100%;
+    max-height: 100vh;
+    background: url('/img/2019/maraton/rules-bg.jpg');
+    background-size: cover;
+    padding: 50px 0;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.bases .title-1 {
+    font-family: 'AmsiPro-Ultra';
+    font-size: 2.5em;
+    color: #E42330;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.bases .cuerda-derecha {
+    width: 120px;
+    position: absolute;
+    margin-top: -150px;
+    right: 30%;
+}
+
+.bases .cuerda-izquierda {
+    width: 120px;
+    position: absolute;
+    margin-top: -150px;
+    left: 30%;
+}
+
+.madera {
+    width: 35%;
+    min-width: 400px;
+    margin: 25px auto;
+    padding: 10px 55px;
+    background: url('/img/2019/maraton/input-madera.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.madera p {
+    padding: 10px;
+    font-family: 'Museo 500';
+    color: #87562A;
+    line-height: 25px;
+}
+
+.madera p strong {
+    font-family: 'Museo 900';
+}
+
+.madera p a {
+    font-family: 'Museo 900';
+    text-decoration: underline;
+    color: #87562A;
+}
+
+.madera p a:hover {
+    color: #E42330;
+}
+
+.rotate-right {
+    transform: rotate(1deg);
+}
+
+.rotate-left {
+    transform: rotate(-1deg);
+}
+
+/* END BASES */
+
+/* VIDEO */
+
+.video {
+    width: 100%;
+    height: 50vh;
+    background: url('/img/2019/maraton/video-bg.jpg');
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.video .btn-play {
+    display: block;
+    padding-top: 16vh;  
+    margin: auto;
+}
+
+.video img {
+    width: 100px;
+}
+
+/* END VIDEO */
+
+/* PUNTAJE */
+
+.puntaje {
+    width: 100%;
+    max-height: 100vh;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(20,184,235,1) 100%);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.puntaje .madera {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.puntaje .title-2 {
+    font-family: 'AmsiPro-Ultra';
+    text-align: center;
+    font-size: 2em;
+    color: #87562A;
+    padding: 15px 10px;
+}
+
+.puntaje .cuerda-wrapper {
+    vertical-align: bottom;
+    width: fit-content;
+    overflow: hidden;
+}
+
+.puntaje .cuerda-derecha {
+    object-fit: cover;
+    vertical-align: baseline;
+    width: 100px;
+    height: 15vh;
+    position: absolute;
+    right: 30%;
+}
+
+.puntaje .cuerda-izquierda {
+    object-fit: cover;
+    vertical-align: baseline;
+    width: 100px;
+    height: 15vh;
+    position: absolute;
+    left: 30%;
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 12px); }
+    to   { transform: translate(0, 0px); }
+}
+
+.puntaje .puntos-wrapper {
+    margin: 8em 0;
+    width: 100%;
+    display: flex;
+    overflow: hidden!important;
+}
+
+.puntaje .puntos-wrapper .opcion {
+    width: 33%;
+    padding: 20px;
+    text-align: center;
+}
+
+.puntaje .puntos-wrapper .opcion img {
+    max-width: 100%;
+    margin: 20px;
+}
+
+.puntaje .puntos-wrapper .opcion p {
+    padding: 10px;
+    font-family: 'Museo 500';
+    color: #222;
+    line-height: 20px;
+}
+
+.puntaje .puntos-wrapper .opcion p strong {
+    font-family: 'Museo 900';
+}
+
+.puntaje .puntos-wrapper .opcion p sub {
+    font-size: 0.7em;
+}
+
+/* END PUNTAJE */
+
+/* GANADORES */
+
+.ganadores {
+    width: 100%;
+    min-height: 100vh;
+    background: #E42330;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 100px;
+}
+
+.ganadores .title-3 {
+    font-family: 'AmsiPro-Ultra';
+    font-size: 2.5em;
+    color: #FFF;
+    padding: 10px;
+    margin: 20px;
+}
+
+.ganadores .descripcion {
+    margin: auto;
+    width: 70%;
+    font-family: 'Museo 500';
+    font-size: 1.2em;
+    line-height: 25px;
+    color: #FFF;
+    margin-bottom: 50px;
+}
+
+.ganadores hr {
+    border: 1px solid #fff;
+}
+
+.ganadores .cortes {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.ganadores .cortes .title-cortes {
+    text-align: left;
+    font-family: 'AmsiPro-Ultra';
+    font-size: 1.2em;
+    color: #FFF;
+    padding: 10px 0;
+}
+
+.ganadores .cortes p {
+    text-align: left;
+    font-family: 'Museo 500';
+    line-height: 25px;
+    color: #FFF;
+    padding-bottom: 15px;
+}
+
+
+/* END GANADORES */
+
+/* CUPONES */
+
+.cupones {
+    width: 100%;
+    max-height: 100vh;
+    background: url('/img/2019/maraton/cupones-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cupones .title-1 {
+    font-family: 'AmsiPro-Ultra';
+    font-size: 2.5em;
+    color: #E42330;
+    padding: 50px;
+}
+
+.cupones p {
+    margin: auto;
+    width: 70%;
+    font-family: 'Museo 500';
+    font-size: 1.2em;
+    line-height: 25px;
+    color: #FFF;
+}
+
+.cupones p strong {
+    font-family: 'Museo 900';
+}
+
+.cupones p sub {
+    font-size: 0.7em;
+}
+
+.cupones .pavips {
+    width: 30%;
+    padding: 20px;
+    position: absolute;
+    right: 10%;
+}
+
+.cupones .pavips img {
+    vertical-align: top;
+    max-width: 100%;
+}
+
+.cupones .flex-regalos {
+    width: 100%;
+    height: 64vh;
+    display: flex;
+    justify-content: center;
+}
+
+.cupones .flex-regalos .regalos {
+    align-self: flex-end;
+    width: 50%;
+}
+
+.cupones .regalos img {
+    max-width: 100%;
+}
+
+/* END CUPONES */
+
+/* PLATILLOS */
+
+.platillos {
+    width: 100%;
+    max-height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+    background: url('/img/2019/maraton/dishes-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.platillos .title-1 {
+    font-family: 'AmsiPro-Ultra';
+    font-size: 2.5em;
+    color: #E42330;
+    padding: 50px;
+}
+
+.platillos .slick-desktop {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.platillos .slick-desktop .slide {
+    padding: 10px;
+}
+
+.platillos .slick-desktop .slide .title-platillo {
+    font-family: 'Museo 500';
+}
+
+.platillos .slick-desktop .slide img {
+    max-width: 100%;
+}
+
+.platillos .buscador {
+    margin: auto;
+    margin-top: 50px;
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+.platillos .buscador .boton-vips {
+    width: fit-content;
+    margin: 20px auto;
+    padding: 15px 30px;
+    background-color: #F5A623;
+    border-radius: 50px;
+    font-family: 'Museo 500';
+    color: #FFF;
+    text-decoration: none;
+}
+
+.platillos .buscador .terms {
+    margin-bottom: 30px;
+    font-family: 'Museo 500';
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #222;
+}
+
+.platillos .buscador .terms:hover {
+    color: #E42330;
+}
+
+/* END PLATILLOS */
+
+/* --- --- MEDIA QUERIES --- --- */
+
+@media screen and (max-width: 1024px) {
+    .main {
+        background-position-x: right;
+    }
+
+    .main .hero-txt {
+        padding-left: 5em;
+        padding-top: 4em;
+    }
+
+    .main .btn-wrapper img {
+        max-width: 100%;
+    }
+
+    /* BASES */
+
+    .bases .title-1 {
+        font-size: 2em;
+    }
+
+    .bases .cuerda-derecha {
+        width: 150px;
+        margin-top: -140px;
+        right: 10%;
+    }
+    .bases .cuerda-izquierda {
+        width: 150px;
+        margin-top: -140px;
+        left: 10%;
+    }
+
+    .madera {
+        width: 70%;
+        margin: 80px auto;
+        padding: 20px 55px;
+    }
+
+    .madera p {
+        font-size: 1.2em;
+    }
+
+    /* GANADORES */
+
+    .ganadores .title-3 {
+        font-size: 2em;
+    }
+
+    /* CUPONES */
+
+    .cupones .title-1 {
+        font-size: 2em;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    /* MAIN */
+
+    .main {
+        flex-flow: column nowrap;
+    }
+
+    .main .hero-txt {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .main .logo img{
+        width: 200px;
+    }
+
+    .main .personajes {
+        width: 100%;
+        padding-top: 1em;
+        align-self: center;
+    }
+
+    .main .personajes img {
+        width: 50%;
+
+    }
+
+    .main .btn-wrapper {
+        flex-flow: column nowrap;
+        padding: 50px;
+    }
+
+    .main .btn-wrapper img {
+        max-width: 100%;
+    }
+
+    /* END MAIN */
+
+    /* GANADORES */
+    .ganadores {
+        padding: 20px 50px;
+    }
+
+    /* CUPONES */
+    .cupones .flex-regalos {
+        height: 50vh;
+    }
+
+    /* PLATILLOS */
+    .platillos .title-1 {
+        font-size: 2em;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    /* MAIN */
+
+    .main .hero-txt .logo img {
+        max-width: 150px;
+    }
+
+    /* BASES */
+    .bases .cuerda-derecha {
+        right: 0%;
+    }
+
+    .bases .cuerda-izquierda {
+        left: -2%;
+    }
+
+    .madera {
+        margin: 50px auto;
+        min-width: 350px;
+        padding: 10px 55px;
+    }
+
+    .madera p {
+        font-size: 1em;
+    }
+
+    /* PUNTAJE */
+
+    .puntaje {
+        max-height: 100%;
+    }
+
+    .puntaje .cuerda-derecha {
+        right: 0%;
+    }
+    .puntaje .cuerda-izquierda {
+        left: 0%;
+    }
+
+    .puntaje .puntos-wrapper {
+        margin: 1em 0;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .puntaje .puntos-wrapper .opcion {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* GANADORES */
+
+    .ganadores {
+        padding: 20px;
+    }
+
+    .ganadores .descripcion {
+        width: 90%;
+    }
+
+    /* CUPONES */
+
+    .cupones p {
+        width: 90%;
+    }
+
+    .cupones .flex-regalos {
+        height: 35vh;
+    }
+
+    /* PLATILLOS */
+    .platillos .slick-desktop {
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    /* MAIN */
+
+    .main {
+        background-position: top center;
+    }
+
+    /* BASES */
+
+    .madera {
+        min-width: 320px;
+        padding: 15px 0;
+    }
+
+    .bases .title-1 { 
+        margin:0 60px;
+        font-size: 1.8em;
+    }
+
+    .bases .cuerda-derecha {
+        width: 140px;
+        margin-top: -125px;
+    }
+
+    .bases .cuerda-izquierda {
+        width: 140px;
+        margin-top: -125px;
+
+    }
+
+    /* PLATILLOS */
+
+    .platillos .title-1 {
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width:600px){
+    .main {
+    height: 110vh;
+
+}
+.bases {
+    max-height: none;
+}
+.platillos .buscador .terms {
+	margin-bottom: 10vh;
+}
+}

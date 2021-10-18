@@ -1,0 +1,68 @@
+
+/****** Genral CSS ******/
+
+.stepform {
+	padding: 5% 7.5%;
+	background: none;
+	border: none;
+}
+/*************** Plugin ***************/
+
+
+.sf-wrapper { overflow: hidden; }
+
+.sf-container {
+	overflow: hidden;
+	max-height: 100vh;
+	overflow-y: scroll;
+}
+
+.sf-step { float: left; border: none; 
+
+margin: 0;
+
+padding: 0;
+
+float: left;
+
+position: relative;
+
+max-width: 100vw;}
+
+.sf-error { color: #DD0000; }
+
+.sf-navigation {
+  line-height: 1em;
+  overflow: hidden;
+  text-align: right;
+}
+
+.sf-navigation .nav-prev, .sf-navigation .nav-next {
+  cursor: pointer;
+}
+
+.sf-navigation .nav-prev {
+  opacity: 1;
+  float: left;
+position: relative; 
+}
+
+.sf-navigation .nav-next {
+  float: right;
+  margin-left: 5px;
+}
+
+.sf-navigation span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin: 12px 15px 0 0;
+  background: #CCCCCC;
+}
+
+.sf-navigation span.sf-nav-done { background: #a6e6a6; }
+
+.sf-navigation span.sf-nav-active { background: #f29100; }
+
+.sf-navigation span.sf-nav-error { background: #DD0000; }

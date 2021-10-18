@@ -1,0 +1,385 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.museo900{
+	font-family: 'Museo 900', sans-serif;
+}
+.museo700{
+	font-family: 'Museo 700', sans-serif;
+}
+.museo500{
+	font-family: 'Museo 500', sans-serif;
+}
+.museo300{
+	font-family: 'Museo 300', sans-serif;
+}
+
+/* Header */
+
+.bg-wrapper {
+  background-image: url("../img/background.jpg");
+  background-size: 100%;
+  background-repeat: repeat-y;
+  padding-left: 3em;
+}
+
+.menu-hero {
+  display: grid;
+  max-width: 1400px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, minmax(70px, 1fr));
+  text-align: center;
+  padding-top: 3em;
+  align-items: center;
+}
+
+.buzz {
+  width: 100%;
+  margin-left: auto;
+  text-align: right;
+}
+
+.logo {
+  min-width: 100px;
+}
+
+.coco {
+  width: 90%;
+  margin-right: auto;
+  text-align: left;
+}
+
+.aviso {
+  padding: 30px 0;
+  color: #222;
+  grid-column: 1 / 4;
+}
+
+/* End Header */
+
+/* Menu tabs */
+
+.menu {
+  /* width: 100%; */
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.tab__links {
+  border: none;
+  padding: 5px 80px 15px 80px;
+  font-size: 1.2rem;
+  color: #fff;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+  margin: 10px;
+  white-space: nowrap;
+}
+
+.tab__links--morado {
+  background: url("../img/trazo-morado.svg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.tab__links--naranja {
+  background: url("../img/trazo-naranja.svg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.tab__links:hover,
+.tab__links:active {
+  opacity: 1;
+}
+
+.tab__links::-moz-focus-inner {
+  border: 0;
+}
+
+.tab-active {
+  opacity: 1;
+}
+
+.desayunos,
+.comidas {
+  margin-bottom: 40px;
+}
+
+.platillos-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 30px;
+}
+
+.disclaimer {
+  color: #333;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.platillo__img {
+  margin-bottom: 10px;
+}
+
+.platillo__nombre {
+  color: #ee5739;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.platillo__calorias {
+  color: #243668;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.platillo__descripcion {
+  color: #243668;
+  font-family: "Museo 300";
+  padding: 0 30px;
+}
+
+/* End menu tabs */
+
+/* Divertipack */
+
+.divertipack {
+  background: url("../img/fondo-vasos.jpg");
+  background-position: center;
+  border: #fff dashed 5px;
+  /* width: 100%; */
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.divertipack__titulo {
+  width: 50%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.divertipack__texto {
+  text-align: center;
+}
+
+.divertipack__texto .tagline {
+  color: #37358c;
+  font-family: "Museo 700";
+  font-size: 2em;
+}
+
+.divertipack__texto .promo-vasos {
+  font-family: "Museo 700";
+  font-size: 3em;
+  color: #ee5739;
+  text-shadow: 2px 4px 0px #37358c;
+}
+
+.divertipack__subtitulo {
+  grid-column-end: span 2;
+  color: #37358c;
+  padding: 20px;
+  text-align: center;
+}
+
+.adicional {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-family: "Museo 500";
+  padding: 10px;
+}
+
+.adicional__card {
+  padding-left: 20px;
+}
+
+.adicional__categoria {
+  border: none;
+  text-align: center;
+  padding: 5px 80px 15px 80px;
+  font-size: 1.2em;
+  color: #fff;
+  transition: opacity 0.3s ease-in-out;
+  margin: 20px 0;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.adicional__card .platillo__nombre {
+  margin-top: 25px;
+}
+
+.adicional__card .platillo__descripcion {
+  padding: 0;
+}
+
+.adicional__categoria--morado {
+  background: url("../img/trazo-morado.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.adicional__categoria--naranja {
+  background: url("../img/trazo-naranja.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.adicional__categoria--rosa {
+  background: url("../img/trazo-rosa.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.none {
+  display: none;
+}
+
+.contacto-vips {
+  margin: 50px auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.boton-vips {
+  background: #ffa700;
+  color: #fff;
+  font-family: "Museo 500";
+  padding: 15px 25px;
+  display: inline-block;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.boton-vips:hover {
+  background: #cc8605;
+  transform: translatey(-5px);
+}
+
+.legal {
+  text-decoration: none;
+  color: #222;
+  transition: all 0.3s ease-in-out;
+}
+
+.legal:hover {
+  color: #ee5739;
+}
+
+/* End Divertipack */
+
+/*************** MEDIA QUERIES ***************/
+@media (max-width: 356px) {
+}
+
+@media (max-width: 415px) {
+  .bg-wrapper {
+    padding-left: 2em;
+  }
+
+  .tab__links {
+    margin: 20px 0;
+    padding: 5px 50px 15px 50px;
+  }
+
+  .divertipack {
+    margin-left: 1.3em;
+    border: #fff dashed 3px;
+  }
+
+  .divertipack__titulo {
+    grid-template-columns: 1fr;
+  }
+
+  .divertipack__titulo img {
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .divertipack__texto {
+    grid-row: 2;
+  }
+
+  .adicional__categoria {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .adicional__categoria .platillo__nombre {
+    margin-top: 10px;
+  }
+}
+
+@media (max-height: 810px) {
+}
+
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+
+  .divertipack__titulo {
+    width: 95%;
+  }
+
+  .divertipack__texto {
+    font-size: 10px;
+  }
+
+  .divertipack__subtitulo {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .divertipack__titulo {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1023px) and (max-height: 1366px) and (orientation: portrait) {
+}
+
+@media (max-width:768px) {
+  .menu-hero {
+    grid-template-columns: 1fr 70% 1fr;
+  }
+
+  .logo {
+    grid-column: 2;
+  }
+}
+
+@media(min-width: 768px) and  (max-width: 1400px) {
+
+  .bg-wrapper {
+    padding-left: 9em;
+  }
+}
